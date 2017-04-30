@@ -7,7 +7,7 @@ public class SearchResponse implements Serializable {
    //---------------------------------------------------------------------------
    public final int total;
    public final List<Business> businesses;
-   public final Region region;
+   public final Region region; // Search API
 
    //---------------------------------------------------------------------------
    public SearchResponse(int total, List<Business> businesses, Region region) {

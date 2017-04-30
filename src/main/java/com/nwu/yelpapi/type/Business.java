@@ -55,17 +55,6 @@ public class Business implements Serializable {
    }
 
    //---------------------------------------------------------------------------
-   public class Category {
-      public final String alias;
-      public final String title;
-
-      public Category(String alias, String title) {
-         this.alias = alias;
-         this.title = title;
-      }
-   }
-
-   //---------------------------------------------------------------------------
    public class Coordinates {
       public final double latitude;
       public final double longitude;
