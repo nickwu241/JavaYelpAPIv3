@@ -18,7 +18,7 @@ public class SearchResponse implements Serializable {
 
    //---------------------------------------------------------------------------
    public class Region implements Serializable {
-      public class Center {
+      public class Center implements Serializable {
          public final double latitude;
          public final double longitude;
 
@@ -30,7 +30,7 @@ public class SearchResponse implements Serializable {
 
       public final Center center;
 
-      Region(Center center) {
+      public Region(Center center) {
          this.center = center;
       }
    }

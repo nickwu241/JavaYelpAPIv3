@@ -57,7 +57,7 @@ public class JavaYelpAPISample {
       final AutocompleteResponse autocompleteResponse = autocompleteCall.execute().body();
 
       // Output results from API calls
-      Gson gson = new Gson();
+      final Gson gson = new Gson();
       System.out.println("--Search API--");
       System.out.println(gson.toJson(searchResponse));
       System.out.println("--Phone Search API--");
