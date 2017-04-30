@@ -1,4 +1,4 @@
-group 'YelpAPI'
+group 'com.github.nickwu241'
 version '0.1.0'
 
 apply plugin: 'java'
