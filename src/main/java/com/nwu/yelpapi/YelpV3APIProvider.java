@@ -1,6 +1,7 @@
 package com.nwu.yelpapi;
 
 import com.nwu.yelpapi.pojo.AccessToken;
+import com.sun.istack.internal.NotNull;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -25,7 +26,7 @@ public class YelpV3APIProvider {
    private final String client_secret;
 
    //---------------------------------------------------------------------------
-   public YelpV3APIProvider(String client_id, String client_secret) {
+   public YelpV3APIProvider(@NotNull String client_id, @NotNull String client_secret) {
       yelpAuth = new Retrofit.Builder()
             .baseUrl(API_HOST)
             .addConverterFactory(GsonConverterFactory.create())
@@ -42,10 +43,17 @@ public class YelpV3APIProvider {
 
    //---------------------------------------------------------------------------
    public YelpV3API getAPI(final AccessToken accessToken) {
+      if (accessToken == null) {
+         return null;
+      }
+
       OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
          public Response intercept(Chain chain) throws IOException {
             Request request =
-                  chain.request().newBuilder().header("Authorization", "Bearer " + accessToken.access_token).build();
+                  chain.request()
+                       .newBuilder()
+                       .header("Authorization", "Bearer " + accessToken.access_token)
+                       .build();
 
             return chain.proceed(request);
          }
