@@ -5,9 +5,9 @@ import java.util.List;
 
 public class AutocompleteResponse implements Serializable {
    //---------------------------------------------------------------------------
-   List<Term> terms;
-   List<Business> businesses;
-   List<Category> categories;
+   public final List<Term> terms;
+   public final List<Business> businesses;
+   public final List<Category> categories;
 
    //---------------------------------------------------------------------------
    public AutocompleteResponse(List<Term> terms, List<Business> businesses,
