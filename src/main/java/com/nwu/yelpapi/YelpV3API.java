@@ -1,9 +1,9 @@
 package com.nwu.yelpapi;
 
-import com.nwu.yelpapi.type.AutocompleteResponse;
-import com.nwu.yelpapi.type.Business;
-import com.nwu.yelpapi.type.ReviewResponse;
-import com.nwu.yelpapi.type.SearchResponse;
+import com.nwu.yelpapi.pojo.AutocompleteResponse;
+import com.nwu.yelpapi.pojo.Business;
+import com.nwu.yelpapi.pojo.ReviewResponse;
+import com.nwu.yelpapi.pojo.SearchResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

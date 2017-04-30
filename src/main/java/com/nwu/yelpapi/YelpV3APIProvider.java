@@ -1,6 +1,6 @@
 package com.nwu.yelpapi;
 
-import com.nwu.yelpapi.type.AccessToken;
+import com.nwu.yelpapi.pojo.AccessToken;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

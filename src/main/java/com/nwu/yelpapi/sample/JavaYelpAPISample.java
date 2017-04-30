@@ -3,7 +3,7 @@ package com.nwu.yelpapi.sample;
 import com.google.gson.Gson;
 import com.nwu.yelpapi.YelpV3API;
 import com.nwu.yelpapi.YelpV3APIProvider;
-import com.nwu.yelpapi.type.*;
+import com.nwu.yelpapi.pojo.*;
 import retrofit2.Call;
 
 import java.io.IOException;

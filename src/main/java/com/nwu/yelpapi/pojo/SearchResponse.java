@@ -1,4 +1,4 @@
-package com.nwu.yelpapi.type;
+package com.nwu.yelpapi.pojo;
 
 import java.io.Serializable;
 import java.util.List;
