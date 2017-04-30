@@ -55,7 +55,7 @@ public class Business implements Serializable {
    }
 
    //---------------------------------------------------------------------------
-   public class Coordinates {
+   public class Coordinates implements Serializable {
       public final double latitude;
       public final double longitude;
 
@@ -66,7 +66,7 @@ public class Business implements Serializable {
    }
 
    //---------------------------------------------------------------------------
-   public class Hour {
+   public class Hour implements Serializable {
       public class Open {
          public final int day;
          public final String start;
@@ -93,7 +93,7 @@ public class Business implements Serializable {
    }
 
    //---------------------------------------------------------------------------
-   public class Location {
+   public class Location implements Serializable {
       public final String address1;
       public final String address2;
       public final String address3;

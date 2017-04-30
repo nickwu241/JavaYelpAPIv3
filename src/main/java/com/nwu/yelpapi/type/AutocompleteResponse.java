@@ -18,7 +18,7 @@ public class AutocompleteResponse implements Serializable {
    }
 
    //---------------------------------------------------------------------------
-   public class Term {
+   public class Term implements Serializable {
       public final String text;
 
       public Term(String text) {

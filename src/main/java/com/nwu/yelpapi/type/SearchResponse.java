@@ -17,7 +17,7 @@ public class SearchResponse implements Serializable {
    }
 
    //---------------------------------------------------------------------------
-   public class Region {
+   public class Region implements Serializable {
       public class Center {
          public final double latitude;
          public final double longitude;

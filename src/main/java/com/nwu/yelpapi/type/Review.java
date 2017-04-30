@@ -21,7 +21,7 @@ public class Review implements Serializable {
    }
 
    //---------------------------------------------------------------------------
-   public class User {
+   public class User implements Serializable {
       public final String name;
       public final String image_url;
 
