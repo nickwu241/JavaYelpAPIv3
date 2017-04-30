@@ -1,8 +1,8 @@
 package com.nwu.yelpapi;
 
-import com.nwu.yelpapi.datatype.Business;
-import com.nwu.yelpapi.datatype.ReviewResponse;
-import com.nwu.yelpapi.datatype.SearchResponse;
+import com.nwu.yelpapi.type.Business;
+import com.nwu.yelpapi.type.ReviewResponse;
+import com.nwu.yelpapi.type.SearchResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

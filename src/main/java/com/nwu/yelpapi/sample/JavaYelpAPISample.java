@@ -3,9 +3,9 @@ package com.nwu.yelpapi.sample;
 import com.google.gson.Gson;
 import com.nwu.yelpapi.YelpAPI;
 import com.nwu.yelpapi.YelpV3Factory;
-import com.nwu.yelpapi.datatype.AccessToken;
-import com.nwu.yelpapi.datatype.Business;
-import com.nwu.yelpapi.datatype.SearchResponse;
+import com.nwu.yelpapi.type.AccessToken;
+import com.nwu.yelpapi.type.Business;
+import com.nwu.yelpapi.type.SearchResponse;
 import retrofit2.Call;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.nwu.yelpapi.datatype;
+package com.nwu.yelpapi.type;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,15 +9,15 @@ public class Business implements Serializable {
    public final Coordinates coordinates;
    public final String display_phone;
    public final double distance; // Search API
-   public final List<Hour> hours; // com.nwu.yelpapi.data.Business API
+   public final List<Hour> hours; // Business API
    public final String id;
    public final String image_url;
-   public final Boolean is_claimed; // com.nwu.yelpapi.data.Business API
+   public final Boolean is_claimed; // Business API
    public final boolean is_closed;
    public final Location location;
    public final String name;
    public final String phone;
-   public final List<String> photos; // com.nwu.yelpapi.data.Business API
+   public final List<String> photos; // Business API
    public final String price;
    public final double rating;
    public final int review_count;
@@ -113,7 +113,7 @@ public class Business implements Serializable {
       public final List<String> display_address;
       public final String state;
       public final String zip_code;
-      public final String cross_streets; // com.nwu.yelpapi.data.Business API
+      public final String cross_streets; // Business API
 
       public Location(String address1, String address2, String address3,
                       String city, String country, List<String> display_address,

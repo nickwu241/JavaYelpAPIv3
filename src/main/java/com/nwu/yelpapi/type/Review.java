@@ -1,4 +1,4 @@
-package com.nwu.yelpapi.datatype;
+package com.nwu.yelpapi.type;
 
 import java.io.Serializable;
 
