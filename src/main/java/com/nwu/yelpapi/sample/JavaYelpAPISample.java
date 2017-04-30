@@ -1,8 +1,8 @@
 package com.nwu.yelpapi.sample;
 
 import com.google.gson.Gson;
-import com.nwu.yelpapi.YelpAPI;
-import com.nwu.yelpapi.YelpV3Factory;
+import com.nwu.yelpapi.YelpV3API;
+import com.nwu.yelpapi.YelpV3APIProvider;
 import com.nwu.yelpapi.type.AccessToken;
 import com.nwu.yelpapi.type.Business;
 import com.nwu.yelpapi.type.SearchResponse;
@@ -21,10 +21,10 @@ public class JavaYelpAPISample {
    public static void main(String... args) throws IOException {
       assert(CLIENT_ID != null && CLIENT_SECRET != null);
 
-      final YelpV3Factory factory = new YelpV3Factory(CLIENT_ID, CLIENT_SECRET);
+      final YelpV3APIProvider factory = new YelpV3APIProvider(CLIENT_ID, CLIENT_SECRET);
       final AccessToken accessToken = factory.getAccessToken();
 
-      final YelpAPI yelp = factory.getAPI(accessToken);
+      final YelpV3API yelp = factory.getAPI(accessToken);
 
       final HashMap<String, String> params = new HashMap<String, String>();
       params.put("location", DEFAULT_LOCATION);

@@ -11,7 +11,7 @@ import retrofit2.http.QueryMap;
 
 import java.util.Map;
 
-public interface YelpAPI {
+public interface YelpV3API {
    String SEARCH_PATH = "/v3/businesses/search";
    String BUSINESS_PATH = "/v3/businesses/{id}";
    String REVIEWS_PATH = "/v3/businesses/{id}/reviews";

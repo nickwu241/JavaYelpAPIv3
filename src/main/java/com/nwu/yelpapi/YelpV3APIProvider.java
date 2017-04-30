@@ -14,22 +14,22 @@ import retrofit2.http.POST;
 
 import java.io.IOException;
 
-public class YelpV3Factory {
+public class YelpV3APIProvider {
    //---------------------------------------------------------------------------
    private static final String API_HOST = "https://api.yelp.com";
    private static final String TOKEN_PATH = "/oauth2/token";
    private static final String GRANT_TYPE = "client_credentials";
 
-   private final YelpAuthorization yelpAuth;
+   private final YelpOAuth2 yelpAuth;
    private final String client_id;
    private final String client_secret;
 
    //---------------------------------------------------------------------------
-   public YelpV3Factory(String client_id, String client_secret) {
+   public YelpV3APIProvider(String client_id, String client_secret) {
       yelpAuth = new Retrofit.Builder()
             .baseUrl(API_HOST)
             .addConverterFactory(GsonConverterFactory.create())
-            .build().create(YelpAuthorization.class);
+            .build().create(YelpOAuth2.class);
       this.client_id = client_id;
       this.client_secret = client_secret;
    }
@@ -41,7 +41,7 @@ public class YelpV3Factory {
    }
 
    //---------------------------------------------------------------------------
-   public YelpAPI getAPI(final AccessToken accessToken) {
+   public YelpV3API getAPI(final AccessToken accessToken) {
       OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
          public Response intercept(Chain chain) throws IOException {
             Request request =
@@ -55,11 +55,11 @@ public class YelpV3Factory {
             .baseUrl(API_HOST)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
-            .build().create(YelpAPI.class);
+            .build().create(YelpV3API.class);
    }
 
    //---------------------------------------------------------------------------
-   private interface YelpAuthorization {
+   private interface YelpOAuth2 {
       @FormUrlEncoded
       @POST(TOKEN_PATH)
       Call<AccessToken> getToken(@Field("grant_type") String grant_type,
